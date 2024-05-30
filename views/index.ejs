@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All chats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+    <a>Nothing is Pleasanter Than Exploring a Library</a>
+</nav>
+    <form method="GET" action="/chats/new">
+        <button class="btn">
+            Add Member
+            </button>
+        
+    </form>
+    </div>
+    <%for(let chat of chats){%>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Member Details</div>
+                <div class="card-description">
+                     <p>Member :<%=chat.name%></p>
+            <p>Book name: <%= chat.book%></p>
+            <p>Author name: <%= chat.aut %></p>
+            <p><%= chat.created_at.toString().split(" ")[4]%></p>
+            <p><%= chat.created_at.toString().split(" ").slice(0,4).join(" ")%></p>
+            <div class="bts">
+            <form method="GET" action="/chats/<%= chat._id%>/edit">
+                <button class="btn1">Edit</button>
+            </form>
+            <form method="POST" action="/chats/<%= chat._id%>?_method=DELETE">
+                <button class="btn1"> Delete</button>
+            </form>
+            </div>
+            </div>
+        </div>
+            </div>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    <%}%>
+
+    
+</body>
+</html>

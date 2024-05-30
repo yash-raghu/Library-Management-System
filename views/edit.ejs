@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write</title>
+   <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+    .card {
+    width: 500px;
+    background-color:#C3E0E5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: auto;
+  }
+
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.5em;
+    color: #2c3e50;
+
+  }
+
+  .card-description {
+    color: #7f8c8d;
+   
+  }
+  .btn1{
+    color: white;
+    background-color: #5885AF;
+    width: 120px;
+    height: 40px;
+    border-radius: 9px;
+    border: aliceblue solid 2px;
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular'
+}
+.btn1:hover {
+  background-color: #34495e;
+}
+   </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">
+    <p>Edit the Details of Member: <%=chat._id%></p>
+    </div>
+    <div class="card-description">
+    <p>This book is issued for<b> <%=chat.name%></b> and book name is <b><%= chat.book%></b></p>
+    <form method="POST" action="/chats/<%=chat._id%>?_method=PUT">
+        <textarea name="aut" placeholder="write author name" rows="5" cols="20"></textarea>
+    <br>
+        <button class="btn1">Edit</button>
+    </form>
+    </div>
+
+    </div>
+    </div>
+</body>
+</html>

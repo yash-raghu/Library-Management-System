@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  nav {
+    background-color: #2c3e50;
+    overflow: hidden;
+    color: white;
+  }
+  nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+  }
+  nav a:hover {
+    background-color: #34495e;
+  }
+  .card {
+    width: 500px;
+    background-color:#C3E0E5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: auto;
+  }
+
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-description {
+    color: #7f8c8d;
+   
+  }
+  .btn1{
+    color: white;
+    background-color: #5885AF;
+    width: 120px;
+    height: 40px;
+    border-radius: 9px;
+    border: aliceblue solid 2px;
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular'
+}
+.btn1:hover {
+  background-color: #34495e;
+}
+    </style>
+</head>
+<body>
+    <nav>
+    <a>Add New Member</a>
+    </nav>
+    <br>
+    <br>
+
+    <div class="card">
+        <div class="card-content">
+            <div class="card-description">
+    <form method="POST" action="/chats" >
+        <p> Name: <input placeholder="Enter name" name="name"></p>
+        <p>Book name: <input placeholder="Enter book name" name="book"></p>
+       <p> Author name:<textarea name="aut" placeholder="Enter author name..."> </textarea></p>
+    
+        <button class="btn1">Add Member</button>
+
+    </form>
+</div>
+</div>
+</div>
+    
+</body>
+</html>
